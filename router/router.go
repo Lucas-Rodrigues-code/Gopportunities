@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Initialize()  {
+func Initialize() {
 	// Create a Gin router with default middleware (logger and recovery)
 	r := gin.Default()
 
@@ -18,6 +18,7 @@ func Initialize()  {
 		})
 	})
 
+	initializeRoutes(r)
 	// Start the server on port 8080
-	r.Run(":8080") // Listen and serve on	
+	r.Run(":8080") // Listen and serve on
 }
